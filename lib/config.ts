@@ -1,9 +1,15 @@
+import ERC721A from "../abis/ERC721A.json";
+
 const config = {
-    tokenAddress: process.env.NEXT_PUBLIC_TOKEN_ADDRESS
+    chainId: Number(process.env.NEXT_PUBLIC_CHAIN_ID || 4),
+    tokenAddress: process.env.NEXT_PUBLIC_TOKEN_ADDRESS,
+    contractInterface: ERC721A.abi,
 }
 
 console.log(config)
 
 export const {
-    tokenAddress
+    chainId,
+    tokenAddress,
+    contractInterface
 } = config
