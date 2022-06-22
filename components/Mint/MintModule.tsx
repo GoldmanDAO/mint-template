@@ -27,7 +27,7 @@ const useContractSupply = (enabled?: boolean) => {
             contractInterface: contractInterface,
         },
         "totalSupply",
-        { chainId: defaultChain.id, enabled: enabled ?? true }
+        { enabled: enabled ?? true }
     );
 };
 
